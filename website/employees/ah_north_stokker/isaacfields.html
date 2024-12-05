@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Isaac Fields - Ah North Stokker</title>
+        <link rel="icon" type="image/x-icon" href="ah_north_stokker/images/logo.png">
+    </head>
+    <body>
+        <h1>Isaac Fields</h1>
+        <a href="index.htm">Go to index</a>
+        <hr>
+        <h2>Information</h2>
+        <p>Click on a news item for more information. <i>No shifts</i> means no shift that day. Br means break. Worked is how many hours you will work. Below is a list of the abbreviations per department.</p>
+        <li><shiftman>Man = Management</shiftman></li>
+        <li><shiftre>Re = Restocking</shiftre></li>
+        <li><shiftcash>Cash = Cashiers</shiftcash></li>
+        <li><shiftsm>Sm = Splitting & Mirroring</shiftsm></li>
+        <li><shiftpromo>Promo = Promotion</shiftpromo></li>
+        <hr>
+        <h2>News</h2>
+        <a href="news.html"><img src="images/news.png" alt="News icon" style="width:14px;height:14px;"></a>
+        <label>No news to report.</label>
+        <hr>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'London')">Week 9</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Week 10</button>
+          </div>
+    <div id="London" class="tabcontent"><span onclick="this.parentElement.style.display='none'" class="topright">x</span>
+        <h2>Roster for week 9</h2>
+        <h3 id="#Monday">Monday</h3>
+        <shiftpromo>Promo 06:00 - 08:00 | Br 00:00 | Worked 02:00</shiftpromo><br><br>
+        <shiftre>Re 08:00 - 12:30 | Br 00:15 | Worked 04:15</shiftre><br><br>
+        <shiftman>Man 13:00 - 16:00 | Br 00:15 | Worked 02:45</shiftman>
+        <hr>
+        <h3 id="#Tuesday">Tuesday</h3>
+        <shiftman>Man 07:00 - 13:00 | Br 00:15 | Worked 05:45</shiftman>
+        <hr>
+        <h3 id="#Wednesday">Wednesday</h3>
+        <i>No shifts</i>
+        <hr>
+        <h3 id="#Thursday">Thursday</h3>
+        <shiftman>Man 09:00 - 12:30 | Br 00:00 | Worked 03:30</shiftman><br><br>
+        <shiftre>Re 13:00 - 16:00 | Br 00:00 | Worked 03:00</shiftre>
+        <hr>
+        <h3 id="#Friday">Friday</h3>
+        <shiftre>Re 07:00 - 13:00 | Br 00:15 | Worked 05:45</shiftre><br><br>
+        <shiftman>Man 13:00 - 14:00 | Br 00:00 | Worked 01:00</shiftman>
+        <hr>
+        <h3 id="#Saturday">Saturday</h3>
+        <shiftre>Re 12:30 - 16:45 | Br 00:00 | Worked 04:15</shiftre><br><br>
+        <shiftcash>Cash 17:00 - 19:00 | Br 00:00 | Worked 02:00</shiftcash>
+        <hr>
+        <h3 id="#Sunday">Sunday</h3>
+        <i>No shifts</i>
+    </div>
+    <div id="Paris" class="tabcontent"><span onclick="this.parentElement.style.display='none'" class="topright">x</span>
+        <h2>Roster for week 10</h2>
+        <h3 id="#Monday">Monday</h3>
+        <shiftpromo>Promo 06:00 - 08:00 | Br 00:00 | Worked 02:00</shiftpromo><br><br>
+        <shiftre>Re 08:00 - 12:30 | Br 00:15 | Worked 04:15</shiftre><br><br>
+        <shiftman>Man 13:00 - 16:00 | Br 00:15 | Worked 02:45</shiftman>
+        <hr>
+        <h3 id="#Tuesday">Tuesday</h3>
+        <shiftman>Man 07:00 - 13:00 | Br 00:15 | Worked 05:45</shiftman>
+        <hr>
+        <h3 id="#Wednesday">Wednesday</h3>
+        <i>No shifts</i>
+        <hr>
+        <h3 id="#Thursday">Thursday</h3>
+        <shiftman>Man 09:00 - 12:30 | Br 00:00 | Worked 03:30</shiftman><br><br>
+        <shiftre>Re 13:00 - 16:00 | Br 00:00 | Worked 03:00</shiftre>
+        <hr>
+        <h3 id="#Friday">Friday</h3>
+        <shiftre>Re 07:00 - 13:00 | Br 00:15 | Worked 05:45</shiftre><br><br>
+        <shiftman>Man 13:00 - 14:00 | Br 00:00 | Worked 01:00</shiftman>
+        <hr>
+        <h3 id="#Saturday">Saturday</h3>
+        <shiftre>Re 12:30 - 16:45 | Br 00:00 | Worked 04:15</shiftre><br><br>
+        <shiftcash>Cash 17:00 - 19:00 | Br 00:00 | Worked 02:00</shiftcash>
+        <hr>
+        <h3 id="#Sunday">Sunday</h3>
+        <i>No shifts</i>
+    </div>
+    <script src="script.js"></script>    
+    </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ah_north_stokker/style.css">
+    <link rel="icon" type="image/x-icon" href="ah_north_stokker/images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #caps {
+            display: none;
+            color: red;
+        }
+        .loginbutton {
+            background-color: #e1ecf4;
+            border-radius: 3px;
+            border: 1px solid #7aa7c7;
+            box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+            box-sizing: border-box;
+            color: #39739d;
+            cursor: pointer;
+            display: inline-block;
+            font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.15385;
+            margin: 0;
+            outline: none;
+            padding: 8px .8em;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: baseline;
+            white-space: nowrap;
+        }
+        .loginbutton:hover {
+            background-color: #b3d3ea;
+            color: #2c5777;
+        }
+        .loginbutton:focus {
+        box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+        }
+        .loginbutton:active {
+        background-color: #a0c7e4;
+        box-shadow: none;
+        color: #2c5777;
+        }
+    </style>
+    <title>Login - Ah Stokker</title>
+</head>
+<body>
+            <header>
+                <div class="logo"><a href="#">AH Stokker group</a></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+                        <li><a href="solicitate/index.htm"><i class="fa fa-list-alt"></i>&nbsp; Solicitate</a></li>
+                        <li class="acnav"><a href="login.html"><i class="fa fa-sign-in"></i>&nbsp;Login</a></li>
+                            </ul>
+                    <div class="hamburger" id="hamburger">&#9776;</div>
+                </nav>
+            </header>
+            <div class="container">
+            <main>
+            <section class="cards">
+                <div class="card">
+                    <h2>Login to AH Stokker</h2>
+                    <p>Once logged in, you can find rosters and other information.</p>    
+                    <form id="loginForm" onsubmit="authenticate(event)">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" autocomplete="username" required><br><br>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required><br><br>
+                        <input type="checkbox" onclick="showPW()"> Show Password<br>
+                        <p id="caps">WARNING! Caps lock is ON.</p>
+                        <input type="submit" value="Login" class="loginbutton">
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <img src="ah_north_stokker/images/logowhite.png" alt="our logo" style="width:60px;height:60px;"><br><br>
+    </footer>
+    <script>
+        function redirectToIndex() {
+            window.location.href = 'start.htm';
+        }
+
+        function authenticate(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const users = [
+                { username: 'd.gray@ah.bbr', password: 'DanielG1' },
+                { username: 'Poleski.Zwaynos', password: 'ABC' },
+                { username: 'Isaac.Fields', password: 'ABC' },
+                { username: 'Tim.De.Lange', password: 'ABC' },
+                { username: 'Harry.Drost', password: 'ABC' }
+            ];
+
+            const currentUser = users.find(user => user.username === username && user.password === password);
+
+            if (currentUser) {
+                redirectToIndex(); // Redirect to index.html upon successful login
+            } else {
+                alert('Invalid credentials. Please try again.');
+            }
+        }
+
+        // Password visibility toggle
+        function showPW() {
+            const passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+
+        // Caps Lock warning
+        const passwordInput = document.getElementById("password");
+        const capsWarning = document.getElementById("caps");
+
+        passwordInput.addEventListener("keyup", function(event) {
+            if (event.getModifierState("CapsLock")) {
+                capsWarning.style.display = "block";
+            } else {
+                capsWarning.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

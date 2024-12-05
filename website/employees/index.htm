@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="ah_north_stokker/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ah Stokker Group</title>
+        <link rel="icon" type="image/x-icon" href="ah_north_stokker/images/logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            a:hover img {
+                transform: scale(1.15);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo"><a href="index.htm">AH Stokker group</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.htm">Home</a></li>
+                    <li><a href="news.htm">News</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="docs.html">Documents</a></li>
+                    <li><a href="search.html"><i class="fa fa-search"></i></a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">&#9776;</div>
+            </nav>
+        </header>
+        <div class="container">
+            <main>
+                <h1>Welcome to the portal!</h1>
+                <section class="cards">
+                    <div class="card">
+                        <h2>Applications</h2>
+                        <a href="news.htm"><img src="ico/news.png" alt="news" width="42px" height="42px"></a>
+                        <a href="calculator.htm"><img src="ico/calculator.png" alt="calculator" width="42px" height="42px"></a>
+                        <a href="https://www.office.com" target="_blank"><img src="ico/office.png" alt="office" width="42px" height="42px"></a>                
+                        <a href="docs.html"><img src="ico/thumb__ocuments_folder.png" alt="documents" width="42px" height="42px"></a>
+                        <a href="calendar.html"><img src="ico/calendar.png" alt="calenar" width="42px" height="42px"></a>
+                    </div>
+                    <div class="card">
+                        <h2>Select facility</h2>
+                        <a href="ah_north_stokker/index.htm">Ah North Stokker</a><br>
+                        <a href="ah_south_stokker/index.htm">Ah South Stokker</a><br>
+                        <a href="ah_cloppenburg_south/index.htm">Ah South Cloppenburg</a>                    
+                    </div>
+                    <div class="card">
+                        <h2>Information</h2>
+                        <a href="staff.html">Managers at Ah Stokker</a><br><br>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <img src="ah_north_stokker/images/logowhite.png" alt="our logo" style="width:60px;height:60px;"><br><br>
+            <a href="login.html"><img src="ico/logout.png" alt="logout" width="42px" height="42px"></a>
+        </footer>
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const nav = document.querySelector('header nav');
+            
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+            hamburger.addEventListener('click', () => {
+                console.log('Hamburger clicked!');
+                nav.classList.toggle('active');
+                });
+
+          </script>          
+    </body>
+</html>

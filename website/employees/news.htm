@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="ah_north_stokker/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>News - AH Stokker</title>
+        <link rel="icon" type="image/x-icon" href="ah_north_stokker/images/logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            a:hover img {
+                transform: scale(1.15);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo"><a href="index.htm">AH Stokker group</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.htm">Home</a></li>
+                    <li><a href="news.htm">News</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="docs.html">Documents</a></li>
+                    <li><a href="search.html"><i class="fa fa-search"></i></a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">&#9776;</div>
+            </nav>
+        </header>
+        <div class="container">
+            <main>
+                <h1>News</h1>
+                <section class="cards">
+                    <div class="card">
+                        <h2>New website!</h2>
+                        <p><i>03-12-2024</i></p>
+                        <p>After years of dealing with an ugly, old-fashioned website, we have a good looking website! Employees can enjoy an easy-to-use application from their computers at home, where rosters and information is posted and up - to - date.</p>
+                    </div>
+                    <div class="card">
+                        <h2>Links</h2>
+                        <a href="https://nieuws.ah.nl/" target="blank">Albert Heijn news (ah.nl)</a>               
+                    </div>
+
+                </section>
+            </main>
+        </div>
+        <footer>
+            <img src="ah_north_stokker/images/logowhite.png" alt="our logo" style="width:60px;height:60px;"><br><br>
+            <a href="login.html"><img src="ico/logout.png" alt="logout" width="42px" height="42px"></a>
+        </footer>
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const nav = document.querySelector('header nav');
+            
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+            hamburger.addEventListener('click', () => {
+                console.log('Hamburger clicked!');
+                nav.classList.toggle('active');
+                });
+
+          </script>          
+    </body>
+</html>

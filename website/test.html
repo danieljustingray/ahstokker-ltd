@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inloggen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .login-container, .tab-container {
+            padding: 20px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background: linear-gradient(to right, rgb(199, 225, 235), white, rgb(199, 225, 235));
+            font-size: large;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .tab-container {
+            display: none;
+            margin-top: 20px;
+        }
+        .tab-content {
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Inloggen</h2>
+        <p>Voor I-Team leden, gebruik je lln nummer en de wachtwoord die je gegeven hebt.</p>
+        <form onsubmit="return handleLogin(event)">
+            <label for="username">Gebruikersnaam</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Wachtwoord</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Inloggen">
+        </form>
+    </div>
+
+    <div class="tab-container" id="tabContainer">
+        <h2>Welkom bij de I-Team</h2>
+        <div class="tab-content">
+            <p>U bent succesvol ingelogd! Dit is de inhoud van het nieuwe tabblad.</p>
+            <p><a href="https://sites.google.com/view/the-i-team/asdfghjkl;" target="_blank">Bezoek onze pagina</a></p>
+        </div>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const correctUsername = '126408';
+            const correctPassword = 'EnoshEnosh1';
+
+            if (username === correctUsername && password === correctPassword) {
+                document.querySelector('.login-container').style.display = 'none';
+                document.getElementById('tabContainer').style.display = 'block';
+            } else {
+                alert('Ongeldige gebruikersnaam of wachtwoord.');
+            }
+        }
+    </script>
+</body>
+</html>

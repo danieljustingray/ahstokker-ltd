@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Daniel Gray - Ah North Stokker</title>
+        <link rel="icon" type="image/x-icon" href="ah_north_stokker/images/logo.png">
+    </head>
+    <body>
+        <h1>Daniel Gray</h1>
+        <a href="index.htm">Ga thuis</a>
+        <hr>
+        <h2>Informatie</h2>
+        <p>Klik op een nieuws item voor meer info. <i>No shifts</i> betekent geen werk voor die dag. Br betekent pauze. Worked is hvl uren je moet werken. Onderaan zijn de afko's per afdeling.</p>
+        <li><shiftman>Man = Management</shiftman></li>
+        <li><shiftre>Re = Restocking</shiftre></li>
+        <li><shiftcash>Cash = Cashiers</shiftcash></li>
+        <hr>
+        <h2>News</h2>
+        <a href="news.html"><img src="images/news.png" alt="News icon" style="width:14px;height:14px;"></a>
+        <label>No news to report.</label><br>  
+        <hr>
+        <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Week 39</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Week 40</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+<h2>Roster for week 39</h2>
+        <h3 id="#Monday">Monday</h3>
+        <i>No shifts</i>
+        <hr>
+        <h3 id="#Tuesday">Tuesday</h3>
+        <shiftre>Re 7:00 - 13:00 | Br 00:15 | Worked 06:45</shiftre><br><br>
+        <shiftman>Man 13:30 - 15:00 | Br 00:00 | Worked 01:30</shiftman>
+        <hr>
+        <h3 id="#Wednesday">Wednesday</h3>
+        <shiftre>Re 6:00 - 13:00 | Br 00:15 | Worked 07:45</shiftre><br><br>
+        <shiftman>Man 13:30 - 15:00 | Br 00:00 | Worked 01:30</shiftman>
+        <hr>
+        <h3 id="#Thursday">Thursday</h3>
+        <shiftman>Man 9:00 - 12:30 | Br 00:00 | Worked 03:30</shiftman><br><br>
+        <shiftre>Re 13:00 - 16:00 | Br 00:00 | Worked 03:00</shiftre>
+        <hr>
+        <h3 id="#Friday">Friday</h3>
+        <shiftre>Re 16:00 - 18:30 | Br 00:00 | Worked 02:30</shiftre><br><br>
+        <shiftcash>Cash 19:00 - 21:00 | Br 00:00 | Worked 02:00</shiftcash>
+        <hr>
+        <h3 id="#Saturday">Saturday</h3>
+        <shiftre>Re 06:00 - 13:00 | Br 00:15 | Worked 06:45</shiftre>
+        <hr>
+        <h3 id="#Sunday">Sunday</h3>
+        <i>No shifts</i>
+</div>
+<div id="Paris" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+<h2>Roster for week 40</h2>
+        <h3 id="#Monday">Monday</h3>
+        <i>No shifts</i>
+        <hr>
+        <h3 id="#Tuesday">Tuesday</h3>
+        <shiftre>Re 7:00 - 13:00 | Br 00:15 | Worked 06:45</shiftre><br><br>
+        <shiftman>Man 13:30 - 15:00 | Br 00:00 | Worked 01:30</shiftman>
+        <hr>
+        <h3 id="#Wednesday">Wednesday</h3>
+        <shiftre>Re 6:00 - 13:00 | Br 00:15 | Worked 07:45</shiftre><br><br>
+        <shiftman>Man 13:30 - 15:00 | Br 00:00 | Worked 01:30</shiftman>
+        <hr>
+        <h3 id="#Thursday">Thursday</h3>
+        <shiftman>Man 9:00 - 12:30 | Br 00:00 | Worked 03:30</shiftman><br><br>
+        <shiftre>Re 13:00 - 16:00 | Br 00:00 | Worked 03:00</shiftre>
+        <hr>
+        <h3 id="#Friday">Friday</h3>
+        <shiftre>Re 16:00 - 18:30 | Br 00:00 | Worked 02:30</shiftre><br><br>
+        <shiftcash>Cash 19:00 - 21:00 | Br 00:00 | Worked 02:00</shiftcash>
+        <hr>
+        <h3 id="#Saturday">Saturday</h3>
+        <shiftre>Re 06:00 - 13:00 | Br 00:15 | Worked 06:45</shiftre>
+        <hr>
+        <h3 id="#Sunday">Sunday</h3>
+        <i>No shifts</i> 
+</div>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script> 
+    </body>
+</html>

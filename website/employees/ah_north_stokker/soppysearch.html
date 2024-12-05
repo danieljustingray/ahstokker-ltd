@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="ah_north_stokker/images/soppyinclogo.png">
+    <title>SoppySearch</title>
+    <style>
+        body {
+            background-color: rgb(192, 192, 192);
+            font-family: 'Comic Sans MS';
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            background-color: rgb(235, 216, 52);
+            text-align: center;
+            padding: 20px;
+        }
+        #logo {
+            font-size: 50px;
+            color: black;;
+        }
+        #search {
+            text-align: center;
+            margin-top: 50px;
+        }
+        #search-bar {
+            width: 300px;
+            padding: 5px;
+            font-size: 18px;
+        }
+        #search-button {
+            background-color: yellow;
+            color: black;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+        #search-button:hover {
+            background-color: white;
+        }
+        #footer {
+            background-color: #cccccc;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="logo">SoppySearch</div>
+    </div>
+    <div id="search">
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" id="search-bar" placeholder="Search the web...">
+            <input type="submit" value="Input" id="search-button">
+        </form>
+    </div>
+    <div id="footer">@1994 <a href="http://soppyinc.nl" target="blank">Soppy Inc.</a></div>
+    <button onclick="history.back()">Go Back</button>
+</body>
+</html>
+

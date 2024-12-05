@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ah Stokker Group</title>
+        <link rel="icon" type="image/x-icon" href="images/logo.png">
+        <style>
+            a:hover img {
+                transform: scale(1.15);
+            }
+            button {
+                background-color: #e1ecf4;
+                border-radius: 3px;
+                border: 1px solid #7aa7c7;
+                box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+                box-sizing: border-box;
+                color: #39739d;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #acd9f9;
+                border-radius: 3px;
+                border: 1px solid #7aa7c7;
+                box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+                box-sizing: border-box;
+                color: #39739d;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">AH Stokker group </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.htm">Home</a></li>
+                    <li><a href="../news.htm">News</a></li>
+                    <li><a href="../calendar.html">Calendar</a></li>
+                    <li><a href="../docs.html">Documents</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">&#9776;</div>
+            </nav>
+        </header>
+        <div class="container">
+            <main>
+                <h1>AH North Stokker 0001</h1>
+                <section class="cards">
+                    <div class="card">
+                        <h2>View roster of:</h2>
+                        <select id="pageDropdown">
+                            <option value="#" disabled selected>Select a colleague</option>
+                            <option value="1.html">1 Daniel Gray</option>
+                            <option value="2.html">2 Isaac Fields</option>
+                            <option value="page3.html">Page 3</option>
+                          </select>
+                          <button onclick="goToPage()">Go</button><p>OR</p>
+                          <!--number-->
+                        <input type="text" id="pageInput" placeholder="Enter employee number" />
+                        <button onclick="goToInputPage()">Go</button>
+                    </div>
+                    <div class="card">
+                        <h2>Applications</h2>
+                        <a href="https://controltower.ah.bbr/gray/sstkr/" target="_blank"><img src="../ico/controltower.png" height="42px" width="42px"></a>
+                        <a href="https://retoolbox.ah.bbr/gray/0001/" target="_blank"><img src="../ico/retoolbox.png" height="42px" width="42px"></a>
+                        <a href="https://terminalconnect.zebra.bbr/ahgry/nstkr0001/" target="_blank"><img src="../ico/terminalconnect.png" height="42px" width="42px"></a>
+                    </div>
+                    <div class="card">
+                        <h2>Information</h2>
+                        <a href="openingtimes.html">Opening times</a>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <img src="images/logowhite.png" alt="our logo" style="width:60px;height:60px;"><br><br>
+            <a href="../login.html"><img src="../ico/logout.png" alt="logout" width="42px" height="42px"></a>
+        </footer>
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const nav = document.querySelector('header nav');
+    
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+            function goToPage() {
+                const selectedPage = document.getElementById('pageDropdown').value;
+                if (selectedPage !== "#") {
+                location.href = selectedPage;
+                } else {
+                alert("Please select a page.");
+                }
+            }
+            function goToInputPage() {
+                const input = document.getElementById('pageInput').value.trim();
+                if (input) {
+                location.href = input + ".html";
+                } else {
+                alert("Please enter a valid page name or number.");
+                }
+            }
+        </script>
+    </body>
+</html>

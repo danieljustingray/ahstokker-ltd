@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Tim de Lange - Ah North Stokker</title>
+        <link rel="icon" type="image/x-icon" href="ah_north_stokker/images/logo.png">
+    </head>
+    <body>
+        <h1>Tim de Lange</h1>
+        <a href="index.htm">Go to index</a>
+        <hr>
+        <h2>Information</h2>
+        <p>Click on a news item for more information. <i>No shifts</i> means no shift that day. Br means break. Worked is how many hours you will work. Below is a list of the abbreviations per department.</p>
+        <li><shiftman>Man = Management</shiftman></li>
+        <li><shiftre>Re = Restocking</shiftre></li>
+        <li><shiftcash>Cash = Cashiers</shiftcash></li>
+        <li><shiftsm>Sm = Splitting & Mirroring</shiftsm></li>
+        <li><shiftpromo>Promo = Promotion</shiftpromo></li>
+        <hr>
+        <h2>News</h2>
+        <a href="news.html"><img src="images/news.png" alt="News icon" style="width:14px;height:14px;"></a>
+        <label>No news to report.</label><br>  
+        <hr>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'London')">Week 9</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Week 10</button>
+          </div>
+    <div id="London" class="tabcontent"><span onclick="this.parentElement.style.display='none'" class="topright">x</span>
+        <h2>Roster for week 9</h2>
+        <h3 id="#Monday">Monday</h3>
+        <shiftre>Re 17:00 - 19:00 | Br 00:00 | Worked 02:00</shiftre><br><br>
+        <shiftcash>Cash 19:30 - 22:00 | Br 00:00 | Worked 02:30</shiftcash>
+        <hr>
+        <h3 id="#Tuesday">Tuesday</h3>
+        <shiftre>Re 16:00 - 22:00 | Br 00:30 | Worked 05:30</shiftre>
+        <hr>
+        <h3 id="#Wednesday">Wednesday</h3>
+        <shiftre>Re 12:00 - 21:00 | Br 00:45 | Worked 08:15</shiftre>
+        <hr>
+        <h3 id="#Thursday">Thursday</h3>
+        <i>No shifts</i>
+        <hr>
+        <h3 id="#Friday">Friday</h3>
+        <i>No shifts</i>
+        <hr>
+        <h3 id="#Saturday">Saturday</h3>
+        <i>No shifts</i>
+        <hr>
+        <h3 id="#Sunday">Sunday</h3>
+        <shiftre>Re 13:00 - 16:00 | Br 00:00 | Worked 03:00</shiftre><br><br>
+        <shiftpromo>Promo 16:15 - 19:00 | Br 00:00 | Worked 02:45</shiftpromo>
+    </div>
+    <div id="Paris" class="tabcontent"><span onclick="this.parentElement.style.display='none'" class="topright">x</span>
+        <h2>Roster for week 10</h2>
+        <h3 id="#Monday">Monday</h3>
+        <shiftre>Re 17:00 - 19:00 | Br 00:00 | Worked 02:00</shiftre><br><br>
+        <shiftcash>Cash 19:30 - 22:00 | Br 00:00 | Worked 02:30</shiftcash>
+        <hr>
+        <h3 id="#Tuesday">Tuesday</h3>
+        <shiftre>Re 16:00 - 22:00 | Br 00:30 | Worked 05:30</shiftre>
+        <hr>
+        <h3 id="#Wednesday">Wednesday</h3>
+        <shiftre>Re 12:00 - 21:00 | Br 00:45 | Worked 08:15</shiftre>
+        <hr>
+        <h3 id="#Thursday">Thursday</h3>
+        <i>No shifts</i>
+        <hr>
+        <h3 id="#Friday">Friday</h3>
+        <i>No shifts</i>
+        <hr>
+        <h3 id="#Saturday">Saturday</h3>
+        <i>No shifts</i>
+        <hr>
+        <h3 id="#Sunday">Sunday</h3>
+        <shiftre>Re 13:00 - 16:00 | Br 00:00 | Worked 03:00</shiftre><br><br>
+        <shiftpromo>Promo 16:15 - 19:00 | Br 00:00 | Worked 02:45</shiftpromo>
+    </div>
+    <script src="script.js"></script>    
+    </body>
+</html>
